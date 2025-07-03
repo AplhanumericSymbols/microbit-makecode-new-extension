@@ -1,6 +1,6 @@
 {
-  "name": "voice-buffer-access",
-  "description": "Custom Micro:bit extension to record and access audio buffers",
+  "name": "voicechat",
+  "description": "Custom Microbit extension for voice clip management",
   "dependencies": {
     "core": "*"
   },
