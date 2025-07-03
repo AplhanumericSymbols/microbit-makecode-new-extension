@@ -1,12 +1,17 @@
-// tests go here; this will not be compiled when this package is used as an extension.
-basic.showString("Ready")
-
 input.onButtonPressed(Button.A, function () {
-    voicebuffer.startRecording(3000)
+    basic.showString("REC")
+    voicechat.startRecording(3000)
     basic.showIcon(IconNames.Yes)
 })
 
 input.onButtonPressed(Button.B, function () {
-    let clip = voicebuffer.getLastClip()
+    let clip = voicechat.getLastClip()
     radio.sendBuffer(clip)
+    basic.showString("SENT")
+})
+
+radio.onReceivedBuffer(function (clip: Buffer) {
+    basic.showIcon(IconNames.Heart)
+    // Simulate playback trigger
+    control.raiseEvent(9991, clip.length)
 })
