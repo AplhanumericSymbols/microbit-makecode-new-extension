@@ -22,3 +22,25 @@ To edit this repository in MakeCode.
 
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+# Microbit VoiceChat Extension
+
+This extension lets you record, store, and send voice clips between Microbit v2 devices using simulated buffers. Future versions will support real microphone access via native bindings.
+
+## Features
+- Record simulated audio clips
+- Store and retrieve buffers
+- Send clips via radio
+- Playback support
+
+## Usage
+1. Install the extension in MakeCode via GitHub URL.
+2. Use `startRecording(ms)` to simulate a recording.
+3. Use `getLastClip()` to retrieve the buffer.
+4. Use `playLastClip()` to simulate playback.
+5. Use `radio.sendBuffer()` to transmit clips.
+
+## Future Plans
+- Add real mic access via C++ shims
+- Encrypt voice clips
+- Combine with text messaging
